@@ -1,0 +1,30 @@
+{
+    "name": "lekoala/silverstripe-debugbar",
+    "description": "DebugBar for SilverStripe CMS",
+    "type": "silverstripe-module",
+    "keywords": [
+        "silverstripe",
+        "debugbar",
+        "module",
+        "cms"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "LeKoala",
+            "email": "thomas@lekoala.be"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.3",
+        "silverstripe/framework": "~3.2",
+        "silverstripe/siteconfig": "~3.2",
+        "maximebf/debugbar": "^1.13"
+    },
+    "extra": {
+        "installer-name": "debugbar"
+    },
+    "support": {
+        "issues": "https://github.com/lekoala/silverstripe-debugbar/issues"
+    }
+}
