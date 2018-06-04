@@ -30,27 +30,8 @@
 
                 <div class="post-content">
                     <div class="highlight-bold">$Teaser</div>
-
                     <div class="divider"></div>
-
                     <p>$Content</p>
-
-                    <img src="http://placehold.it/270x335" alt="" class="right" />
-                    <p>Vestibulum rhoncus consequat aliquet. Mauris varius posuere mattis. Duis vitae molestie arcu. Curabitur sollicitudin, velit ut eleifend auctor, nibh orci pharetra risus, a malesuada nisi felis vel turpis. Aliquam fermentum nulla felis, sed molestie libero porttitor in.</p>
-                    <p>Quisque ut dictum justo. Vestibulum lacinia arcu ac dui volutpat consectetur. Nulla dui mauris, consequat non aliquet vitae, volutpat at nunc. Sed eget hendrerit odio. Donec sagittis venenatis est ac fringilla.</p>
-                    <p>Phasellus suscipit aliquam nisl et porttitor. Suspendisse potenti. Fusce libero velit, tristique eu mauris vitae, convallis facilisis sapien. Mauris urna diam, fringilla sit amet eleifend id, commodo ac lorem. Curabitur at erat justo. Morbi tincidunt, nisi in hendrerit adipiscing, lacus orci pellentesque orci, ac tempus purus libero in lectus.</p>
-
-                    <div class="divider"></div>
-
-                    <div class="highlight-color">Donec suscipit, sapien quis vehicula dictum, massa odio posuere nisl, consectetur viverra purus dui vel elit.</div>
-
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse facilisis purus sed justo egestas dapibus. Etiam vel sagittis nisi. Curabitur ac egestas lorem. Sed ut odio iaculis, interdum magna non, mattis dolor. Vestibulum id dignissim elit. Cras ut scelerisque dolor. Vestibulum aliquet eu purus quis pellentesque. Nam eget lacus dolor. </p>
-
-                    <p class="quote">Vivamus suscipit <span>magna eu</span> turpis facilisis ornare. Aliquam ac ipsum dui. Nulla tincidunt orci nec elit dictum euismod ut  lectus <span>ultricies mollis</span> pellentesque.</p>
-
-                    <p>Phasellus pulvinar purus turpis, a consequat orci pellentesque vitae. Donec suscipit, sapien quis vehicula dictum, massa odio posuere nisl, consectetur viverra purus dui vel elit. Fusce tempor ante in metus egestas egestas.</p>
-
-                    <p>Sed in mauris consectetur lectus ultricies mollis. Nulla at vulputate mi. Phasellus mauris augue, sollicitudin nec ornare congue, posuere eget nulla. Vestibulum pulvinar mauris ut magna interdum lacinia. Nam eu viverra urna. Quisque turpis massa, gravida ut faucibus nec, faucibus non turpis. Mauris facilisis et est a mollis. Mauris non sagittis risus</p>
                 </div>
 
                 <div class="share-wraper col-sm-12 clearfix">
@@ -81,32 +62,16 @@
 
                 <div class="comments">
                     <ul>
-                        <li>
-                            <img src="images/comment-man.jpg" alt="" />
-                            <div class="comment">
-                                <a href="#" class="btn btn-default-color">Reply</a>
-                                <h3>John Doe<small>30 July, 2014</small></h3>
-                                <p>Etiam eget felis lacus. In hendrerit, urna in fringilla interdum, nunc mauris condimentum purus, vel ullamcorper dui risus sed tellus. Nullam lacinia porttitor velit fermentum accumsan. Etiam dui lorem, lobortis pellentesque malesuada nec, lacinia pulvinar libero.</p>
-                            </div>
-                            <ul>
-                                <li>
-                                    <img src="images/comment-man.jpg" alt="" />
-                                    <div class="comment">
-                                        <a href="#" class="btn btn-default-color">Reply</a>
-                                        <h3>John Doe<small>30 July, 2014</small></h3>
-                                        <p>In hendrerit, urna in fringilla interdum, nunc mauris condimentum purus, vel ullamcorper dui risus sed tellus. Nullam lacinia porttitor velit fermentum accumsan. Etiam dui lorem, lobortis pellentesque malesuada nec, lacinia pulvinar libero.</p>
-                                    </div>
-                                </li>
-                            </ul>
-                        </li>
-                        <li>
-                            <img src="images/comment-woman.jpg" alt="" />
-                            <div class="comment">
-                                <a href="#" class="btn btn-default-color">Reply</a>
-                                <h3>Mary Doe<small>31 July, 2014</small></h3>
-                                <p>Etiam eget felis lacus. In hendrerit, urna in fringilla interdum, nunc mauris condimentum purus, vel ullamcorper dui risus sed tellus. Nullam lacinia porttitor velit fermentum accumsan. Etiam dui lorem, lobortis pellentesque malesuada nec, lacinia pulvinar libero. Quisque pretium nunc sed nisl vehicula gravida. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                            </div>
-                        </li>
+                        <% loop $Comments %>
+                            <li>
+                                <img src="$ThemeDir()/comment-man.jpg" alt="" />
+                                <div class="comment">
+                                    <a href="#" class="btn btn-default-color">Reply</a>
+                                    <h3>$Name<small>$Created.Format('j F, Y')</small></h3>
+                                    <p>$Comment</p>
+                                </div>
+                            </li>
+                        <% end_loop %>
                     </ul>
 
                     <div class="comments-form">
@@ -114,24 +79,7 @@
                             <h3>Leave a Reply</h3>
                             <p>Your email address will no be published. Required fields are marked*</p>
                         </div>
-
-                        <form class="form-style">
-                            <div class="col-sm-6">
-                                <input type="text" name="Name" placeholder="Name*" class="form-control" />
-                            </div>
-
-                            <div class="col-sm-6">
-                                <input type="email" name="Email" placeholder="Email*" class="form-control"  />
-                            </div>
-
-                            <div class="col-sm-12">
-                                <textarea name="Comment" placeholder="Comment*" class="form-control"></textarea>
-                            </div>
-
-                            <div class="center">
-                                <button type="submit" class="btn btn-default-color btn-lg">Post Comment</button>
-                            </div>
-                        </form>
+                        $CommentForm
                     </div>
                 </div>
 
