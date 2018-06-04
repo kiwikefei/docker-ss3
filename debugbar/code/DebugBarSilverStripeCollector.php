@@ -22,7 +22,7 @@ class DebugBarSilverStripeCollector extends DataCollector implements Renderable,
             'cookies' => self::getCookieData(),
             'parameters' => self::getRequestParameters(),
             'requirements' => self::getRequirementsData(),
-            'user' => Member::currentUserID() ? Member::currentUser()->Title : 'Not logged in',
+            'user' => Member::currentUser() ? Member::currentUser()->Title : 'Not logged in',
             'templates' => self::getTemplateData(),
         );
         return $data;
