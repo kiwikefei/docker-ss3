@@ -7,7 +7,7 @@
             <!-- BEGIN MAIN CONTENT -->
             <div class="main col-sm-8">
 
-                <h1 class="blog-title">How to get your dream property for the best price?</h1>
+                <h1 class="blog-title">$Title</h1>
 
                 <div class="blog-main-image">
                     <img src="http://placehold.it/765x362" alt="" />
@@ -16,20 +16,20 @@
 
                 <div class="blog-bottom-info">
                     <ul>
-                        <li><i class="fa fa-calendar"></i> July 30, 2014</li>
+                        <li><i class="fa fa-calendar"></i> $Date.Long</li>
                         <li><i class="fa fa-comments-o"></i> 3 Comments</li>
                         <li><i class="fa fa-tags"></i> Properties, Prices, best deals</li>
                     </ul>
 
-                    <div id="post-author"><i class="fa fa-pencil"></i> By John Doe</div>
+                    <div id="post-author"><i class="fa fa-pencil"></i> By $Author</div>
                 </div>
 
                 <div class="post-content">
-                    <div class="highlight-bold">Phasellus suscipit aliquam nisl et porttitor. Suspendisse potenti. Fusce libero velit, tristique eu mauris vitae, convallis facilisis sapien. Mauris urna diam, fringilla sit amet eleifend id, commodo ac lorem. Curabitur at erat justo.</div>
+                    <div class="highlight-bold">$Teaser</div>
 
                     <div class="divider"></div>
 
-                    <p>Curabitur dapibus hendrerit dui, vel sagittis lectus laoreet et. Cras vitae purus dictum, fringilla urna sit amet, elementum leo. Etiam blandit enim eu arcu blandit sagittis. Aliquam ligula mi, luctus ut est non, hendrerit scelerisque eros. Integer a velit massa. Pellentesque eu convallis purus, nec elementum neque. Donec arcu elit, venenatis nec mauris convallis, suscipit elementum metus. Vivamus dictum turpis in venenatis auctor.</p>
+                    <p>$Content</p>
 
                     <img src="http://placehold.it/270x335" alt="" class="right" />
                     <p>Vestibulum rhoncus consequat aliquet. Mauris varius posuere mattis. Duis vitae molestie arcu. Curabitur sollicitudin, velit ut eleifend auctor, nibh orci pharetra risus, a malesuada nisi felis vel turpis. Aliquam fermentum nulla felis, sed molestie libero porttitor in.</p>

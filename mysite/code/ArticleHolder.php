@@ -7,9 +7,8 @@ class ArticleHolder extends Page
     //   allowed_children: ArticlePage
     //   can_be_root: true
     // private static variable is identical to yml, however yml has higher priority.
-
     private static $allowed_children = [ 'ArticlePage' ];
-    private static $can_be_root = false;
+
 }
 
 class ArticleHolder_Controller extends Page_Controller
