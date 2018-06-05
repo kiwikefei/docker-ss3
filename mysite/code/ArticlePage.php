@@ -38,6 +38,12 @@ class ArticlePage extends Page
                 ->setMaxLength(50),
             'Content'
         );
+        $fields->removeFieldFromTab('Root.Main','Content');
+        $fields->addFieldToTab(
+            'Root.Main',
+            new HtmlEditorField('Content', 'Content', $this->Content, 'article-page'),
+            'Metadata'
+        );
         $fields->addFieldToTab(
             'Root.Attachment',
             $photo = UploadField::create('Photo')
@@ -50,7 +56,6 @@ class ArticlePage extends Page
         $photo->setFolderName('travel-photos');
         $brochure->getValidator()->setAllowedExtensions(['pdf']);
         $brochure->setFolderName('travel-brochure');
-
         $fields->addFieldToTab(
             'Root.Categories',
             CheckboxSetField::create(
