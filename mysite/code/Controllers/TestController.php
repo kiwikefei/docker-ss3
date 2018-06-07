@@ -2,18 +2,24 @@
 
 class TestController extends Controller
 {
-    private static $allowed_actions = [
-        'test'  => true,
-        'index' => '->canView',
-    ];
-
     public function index()
     {
         return 'hello world';
     }
     public function canView()
     {
-        return true;
+        return false;
     }
-
+    public function foo()
+    {
+        return 'foo';
+    }
+    public function bar()
+    {
+        return 'bar';
+    }
+    public function baz()
+    {
+        return 'baz';
+    }
 }

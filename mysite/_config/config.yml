@@ -11,3 +11,6 @@ SSViewer:
   theme: 'one-ring'
 Debug:
   friendly_error_httpcode: true
+TestController:
+  extensions:
+    - TestExtension
