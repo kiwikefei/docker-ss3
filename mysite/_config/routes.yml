@@ -1,0 +1,7 @@
+---
+Name: routes
+After: 'framework/*', 'cms/*'
+---
+Director:
+  rules:
+    'test//$Action/$Id/$OtherId': 'TestController'

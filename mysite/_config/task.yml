@@ -1,0 +1,8 @@
+---
+Name: tasks
+After: 'framework/*', 'cms/*'
+---
+Task:
+  extensions:
+    - TaskExtension
+    - Versioned("Stage")
