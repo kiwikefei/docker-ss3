@@ -33,8 +33,8 @@ class GridFieldImpersonateAction implements GridField_ColumnProvider, GridField_
         $field = GridField_FormAction::create(
             $gridField,
             'CustomAction' . $record->ID,
-            'Do Action',
-            'docustomaction',
+            'Impersonate',
+            'ImpersonateAction',
             [
                 'RecordID'  => $record->ID
             ]
@@ -44,12 +44,12 @@ class GridFieldImpersonateAction implements GridField_ColumnProvider, GridField_
 
     public function getActions($gridField)
     {
-        return ['docustomaction'];
+        return ['ImpersonateAction'];
     }
 
     public function handleAction(GridField $gridField, $actionName, $arguments, $data)
     {
-        if($actionName == 'docustomaction') {
+        if($actionName == 'ImpersonateAction') {
             Controller::curr()->getRequest()->setStatusCode(200, 'Do Custom Action Done.');
         }
     }
